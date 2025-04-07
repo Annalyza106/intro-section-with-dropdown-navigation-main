@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    
+    <nav class="navbar">
+      <ul>
+        <li class="logo"><a href="#"><img src="images/logo.svg" alt="snap logo"></a></li>
+        <div class="navbar-menu hideOnMobile">
+          <li class="dropdown">
+            <a href="#">Features</a>
+            <button>
+              <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg"><path stroke="#686868" stroke-width="1.5" fill="none" d="m1 1 4 4 4-4"/></svg>
+            </button>
+              <ul class="dropdown-menu feature">
+                <li class="dropdown-item">
+                  <a href="#"><img src="images/icon-todo.svg" alt="">Todo List</a>
+                </li>
+                <li class="dropdown-item">
+                  <a href="#"><img src="images/icon-calendar.svg" alt="">Calendar</a>
+                </li>
+                <li class="dropdown-item">
+                  <a href="#"><img src="images/icon-reminders.svg" alt="">Reminders</a>
+                </li>
+                <li class="dropdown-item">
+                  <a href="#"><img src="images/icon-planning.svg" alt="">Planning</a>
+                </li>
+              </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">Company</a>
+            <button>
+              <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg"><path stroke="#686868" stroke-width="1.5" fill="none" d="m1 1 4 4 4-4"/></svg>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="">History</a></li>
+              <li><a href="">Our Team</a></li>
+              <li><a href="">Blog</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">About</a></li>
+        </div>
+        <div class="account-center hideOnMobile">
+          <li><a href="#">Login</a></li>
+          <li ><a href="#"class="register">Register</a></li>
+        </div>
+      </ul>
+    </nav>
+    <button class="open-sidebar" onclick="openSidebar()">
+      <img src="images/icon-menu.svg" alt="open sidebar button">
+    </button>
+
+    <div class="sidebar show">
+      <ul class="sidebar-nav">
+        <li>
+          <button class="close-sidebar" onclick="closeSidebar()">
+            <img src="images/icon-close-menu.svg" alt="close sidebar button">
+          </button>
+        </li>
+        <li class="dropdown-btn">
+          <a href="#">Features</a>
+          <button>
+            <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg"><path stroke="#686868" stroke-width="1.5" fill="none" d="m1 1 4 4 4-4"/></svg>
+          </button>
+            <ul class="dropdown-container">
+              <li class="dropdown-item">
+                <a href="#"><img src="images/icon-todo.svg" alt="">Todo List</a>
+              </li>
+              <li class="dropdown-item">
+                <a href="#"><img src="images/icon-calendar.svg" alt="">Calendar</a>
+              </li>
+              <li class="dropdown-item">
+                <a href="#"><img src="images/icon-reminders.svg" alt="">Reminders</a>
+              </li>
+              <li class="dropdown-item">
+                <a href="#"><img src="images/icon-planning.svg" alt="">Planning</a>
+              </li>
+            </ul>
+        </li>
+        <li class="dropdown-btn">
+          <a href="#">Company</a>
+          <button>
+            <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg"><path stroke="#686868" stroke-width="1.5" fill="none" d="m1 1 4 4 4-4"/></svg>
+          </button>
+          <ul class="dropdown-container">
+            <li><a href="">History</a></li>
+            <li><a href="">Our Team</a></li>
+            <li><a href="">Blog</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Login</a></li>
+        <li ><a href="#"class="register">Register</a></li>
+      </ul>
+    </div>
+
+    <div class="overlay" onclick="closeSidebar()"></div>
+  </header>
+  
+  <main>
+    <div class="hero">
+      <div class="hero-content">
+        <div class="hero-info">
+          <h1 class="title">Make remote work</h1>
+          <p class="desc">Get your team in sync, no matter your location. Streamline progresses, create team
+            rituals, and watch productivity soar.
+          </p>
+          <button class="btn">Learn more</button>
+        </div>
+
+        <div class="client-logos">
+          <img src="images/client-databiz.svg" alt="databiz logo" height="20">
+          <img src="images/client-audiophile.svg" alt="audiophile logo">
+          <img src="images/client-meet.svg" alt="meet logo">
+          <img src="images/client-retool.svg" alt="retool logo">
+        </div>
+      </div>
+
+      <picture class="image">
+        <source media="(min-width: 750px)" srcset="images/image-hero-desktop.png">
+        <img src="images/image-hero-mobile.png" alt="">
+      </picture>
+    </div>
+  </main>
+
+</body>
+</html>
